@@ -1,0 +1,37 @@
+{
+  "name": "@fullstackcraftllc/codevideo-virtual-keyboard",
+  "version": "1.0.0",
+  "description": "Represents a variety of virtual keyboard setups.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js", "require": "./dist/index.cjs" }
+  },
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js",
+    "type-check": "tsc --noEmit",
+    "test": "npm run build && node --test test/*.test.js",
+    "print-latex-for-whitepaper": "tsc && node ./dist/scripts/print-latex-for-whitepaper.js"
+  },
+  "keywords": [
+    "TypeScript",
+    "CodeVideo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codevideo/codevideo-virtual-keyboard.git"
+  },
+  "issues": {
+    "url": "https://github.com/codevideo/codevideo-virtual-keyboard/issues"
+  },
+  "author": "Chris Frewin",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^4.13.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.4.2"
+  }
+}
